@@ -19,8 +19,8 @@ res.send("welcome Home")
 // Creating object of key and certificate
 // for SSL
 const options = {
-// key: fs.readFileSync("key.pem"),
-// cert: fs.readFileSync("cert.pem"),
+key: fs.readFileSync("key.pem"),
+cert: fs.readFileSync("cert.pem"),
 ca: fs.readFileSync("ca.pem"),
 requestCert: true,
 rejectUnauthorized: true
