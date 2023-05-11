@@ -1,18 +1,34 @@
-const express = require('express');
-const req = require('express/lib/request');
-const app = express()
-const port = 443
+// Requiring in-built https for creating
+// https server
+const https = require("https");
 
-app.get('/', (req, res) => {
-  res.status(200).send('Hello World!');
-  console.log("got request /")
-})
+// Express for handling GET and POST request
+const express = require("express");
+const app = express();
 
-app.get('/test', (req,res)=> {
-    res.status(200).send('end point reached!');
-    console.log("got request /test")
-})
+// Requiring file system to use local files
+const fs = require("fs");
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+
+// Get request for root of the app
+app.get("/", function (req, res) {
+
+res.send("welcome Home")
+});
+
+// Creating object of key and certificate
+// for SSL
+const options = {
+key: fs.readFileSync("key.pem"),
+cert: fs.readFileSync("cert.pem"),
+ca: fs.readFileSync("ca.pem"),
+requestCert: true,
+rejectUnauthorized: true
+};
+
+// Creating https server by passing
+// options and app object
+https.createServer(options, app)
+.listen(443, function (req, res) {
+console.log("Server started at port 443");
+});
