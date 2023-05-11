@@ -18,7 +18,7 @@ https
       // ...
       requestCert: true,
       rejectUnauthorized: false,
-      ca: fs.readFileSync('ca.crt'),
+      ca: fs.readFileSync('apig-cert.pem'),
       // ...
     },
     app
