@@ -5,6 +5,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
+    console.log("got a request")
   if (!req.client.authorized) {
     return res.status(401).send('Invalid client certificate authentication.');
   }
@@ -23,4 +24,4 @@ https
     },
     app
   )
-  .listen(443);
+  .listen(80);
