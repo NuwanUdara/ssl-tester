@@ -40,8 +40,8 @@ res.send("welcome Home")
 // Creating object of key and certificate
 // for SSL
 const options = {
-key: fs.readFileSync("server.key"),
-cert: fs.readFileSync("server.cert"),
+key: fs.readFileSync("key.pem"),
+cert: fs.readFileSync("cert.pem"),
 };
 
 // Creating https server by passing
