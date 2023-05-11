@@ -4,11 +4,11 @@ const app = express()
 const port = 443
 
 app.get('/', (req, res) => {
-  res.send('Hello World!').statusCode(200);
+  res.status(200).send('Hello World!');
 })
 
 app.get('/test', (req,res)=> {
-    res.send('end point reached!').statusCode(200)
+    res.status(200).send('end point reached!');
 })
 
 app.listen(port, () => {
