@@ -42,7 +42,9 @@ res.send("welcome Home")
 const options = {
 key: fs.readFileSync("key.pem"),
 cert: fs.readFileSync("cert.pem"),
-ca: fs.readFileSync("ca.pem")
+ca: fs.readFileSync("ca.pem"),
+requestCert: true,
+rejectUnauthorized: true
 };
 
 // Creating https server by passing
