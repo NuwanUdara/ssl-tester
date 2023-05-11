@@ -1,9 +1,9 @@
 var fs = require('fs'); 
 var https = require('https');
 var options = { 
-    key: fs.readFileSync('server-key.pem'), 
-    cert: fs.readFileSync('server-cert.pem'), 
-    // ca: fs.readFileSync('apig-cert.pem'), 
+    //key: fs.readFileSync('server-key.pem'), 
+    //cert: fs.readFileSync('server-cert.pem'), 
+    ca: fs.readFileSync('apig-cert.pem'), 
     requestCert: true, 
     rejectUnauthorized: true
 };
