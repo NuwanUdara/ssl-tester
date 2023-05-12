@@ -6,10 +6,6 @@ var db = new aws.DynamoDB({
   secretAccessKey: 'FyTCOwrSVXMYaR0wvtS+/QwugJQSnlwPZrdz4Egy',
 });
 
-exports.handler = event => {
-    return queryMyThings();
-}
-
 const queryMyThings = async (event) => { 
  var params = {
       Key: {
