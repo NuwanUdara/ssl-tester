@@ -33,5 +33,5 @@ dynamoDB
     },
   })
   .promise()
-  .then(data => console.log(data.Item))
+  .then(data => console.log(data.Item.certi))
   .catch(console.error)
