@@ -27,9 +27,9 @@ const dynamoDB = new AWS.DynamoDB.DocumentClient()
 
 dynamoDB
   .get({
-    TableName: "cert",
+    TableName: "certs",
     Key: {
-      id: "test1",
+      api: "test1",
     },
   })
   .promise()
