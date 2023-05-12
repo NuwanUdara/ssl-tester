@@ -29,7 +29,7 @@ dynamoDB
   .get({
     TableName: "cert",
     Key: {
-      id: "test1",
+      id: "api",
     },
   })
   .promise()
