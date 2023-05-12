@@ -22,14 +22,14 @@
 // console.log(queryMyThings())
 
 const AWS = require("aws-sdk")
-AWS.config.update({ region: "us-east-2" })
+AWS.config.update({ region: "us-west-2" })
 const dynamoDB = new AWS.DynamoDB.DocumentClient()
 
 dynamoDB
   .get({
     TableName: "cert",
     Key: {
-      id: "api",
+      id: "test1",
     },
   })
   .promise()
