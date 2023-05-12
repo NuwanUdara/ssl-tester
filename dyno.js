@@ -22,8 +22,7 @@
 // console.log(queryMyThings())
 
 const AWS = require("aws-sdk")
-AWS.config.update({ region: "us-east-1" , accessKeyId: 'ASIAXISCRMT26P3W6ENC',
-  secretAccessKey: 'FyTCOwrSVXMYaR0wvtS+/QwugJQSnlwPZrdz4Egy',})
+AWS.config.update({ region: "us-east-2" })
 const dynamoDB = new AWS.DynamoDB.DocumentClient()
 
 dynamoDB
